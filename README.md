@@ -55,7 +55,7 @@ A quantidade de endereços da tabela é definida como constante na linha 5:
 printf("Fator de carga: %g\n", numeroDeTokens/enderecosHash);
 ```
 # Exemplo de execução
-Ao executar o código tendo como o arquivo "teste.c" presente no repositório, a saída esperada é uma lista no seguinte formato: ```<linha>: <token>``` representando os tokens identificados e as respectivas linhas onde foram encontrados. Em seguida, é impressa a tabela hash contendo os tokens em seus respectivos endereços e linhas entre parênteses no formato:<br/> ```<endereço>: <token>(<linha1>, <linha2>,<...>) <token2>(<linha1>, <linha2>,<...>) <...>```<br/>O fator de carga é impresso ao final da saída.
+Ao executar o código tendo como o arquivo "teste.c" presente no repositório a ser lido, a saída esperada é uma lista no seguinte formato: ```<linha>: <token>``` representando os tokens identificados e as respectivas linhas onde foram encontrados. Em seguida, é impressa a tabela hash contendo os tokens em seus respectivos endereços e linhas entre parênteses no formato:<br/> ```<endereço>: <token>(<linha1>, <linha2>,<...>) <token2>(<linha1>, <linha2>,<...>) <...>```<br/>O fator de carga é impresso ao final da saída.
 ```
 1: include
 1: stdio
