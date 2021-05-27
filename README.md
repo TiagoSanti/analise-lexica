@@ -2,7 +2,7 @@
 Algorítmo que lê um código em C e organiza *tokens* pré-definidos encontrados nesse código em uma *tabela hash*.
 
 # Descrição
-A ideia do algorítmo é armazenar os tokens em uma tabela hash, percorrer um arquivo de texto e identificar a existência dos tokens neste arquivo, se os tokens forem identificados, o algorítmo armazena a linha junto aos tokens que estão presentes no texto na tabela.
+A ideia do algorítmo é armazenar os tokens em uma tabela hash, percorrer um arquivo de texto e identificar a existência dos tokens neste arquivo, se os tokens forem identificados, o algorítmo armazena a linha junto aos tokens que estão presentes no texto na tabela. Foi utilizada alocação dinâmica nas listas quando possível.
 
 ## Execução
 O nome do arquivo a ser lido deve ser inserido no argumento na linha de comando, no caso de executar o código "AnaliseLexica.c" para ler o arquivo "teste.c", deve-se executar da seguinte maneira:\
