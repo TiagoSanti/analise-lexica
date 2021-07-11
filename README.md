@@ -1,7 +1,7 @@
-# Análise Léxica
+# Análise Léxica em C
 Algorítmo que lê um código em C e organiza *tokens* pré-definidos encontrados nesse código em uma *tabela hash*.
 
-# Descrição
+## Descrição
 A ideia do algorítmo é armazenar os tokens em uma tabela hash, percorrer um arquivo de texto e identificar a existência dos tokens neste arquivo, se os tokens forem identificados, o algorítmo armazena a linha junto aos tokens que estão presentes no texto na tabela. Foi utilizada alocação dinâmica nas listas quando possível.
 
 ## Execução
@@ -9,11 +9,11 @@ O nome do arquivo a ser lido deve ser inserido no argumento na linha de comando,
 Terminal Linux: ```./AnaliseLexica teste.c```\
 Prompt Windows: ```AnaliseLexica teste.c```
 
-# Análise Léxica
+## Análise Léxica
 É a primeira fase de um processo de compilação, consiste em agrupar caracteres e produzir tokens. A análise neste código não está totalmente condizente com a definição de análise léxica, já que comentários no código não deveriam ser considerados.
 
-# Tabela Hash
-## Descrição básica
+## Tabela Hash
+### Descrição básica
 Uma tabela hash, ou tebela de dispersão é uma estrutura de dados, seu objetivo é permitir, a partir de uma chave, uma busca e obtenção do valor desejado. Essa chave é calculada a partir de uma função hash. No código da Análise Léxica, o método utilizado para a função hash é o da divisão: ```h(k) = k mod m```, sendo *m* o tamanho da tabela. A função está localizada nas linhas 43-45:
 ```
 int h(char palavra[21]) {
@@ -34,7 +34,7 @@ int valor(char palavra[21]) {
 }
 ```
 
-## Tokens, endereços da tabela e Fator de Carga
+### Tokens, endereços da tabela e Fator de Carga
 Os tokens selecionados são definidos nas linhas 177-184:
 ```
 char *tokens[] = {  "auto", "break", "case", "char",
@@ -54,7 +54,7 @@ A quantidade de endereços da tabela é definida como constante na linha 5:
 ```
 printf("Fator de carga: %g\n", numeroDeTokens/enderecosHash);
 ```
-# Exemplo de execução
+## Exemplo de execução
 Ao executar o código tendo como o arquivo "teste.c" presente no repositório a ser lido, a saída esperada é uma lista no seguinte formato: ```<linha>: <token>``` representando os tokens identificados e as respectivas linhas onde foram encontrados. Em seguida, é impressa a tabela hash contendo os tokens em seus respectivos endereços e linhas entre parênteses no formato:<br/> ```<endereço>: <token>(<linha1>, <linha2>,<...>) <token2>(<linha1>, <linha2>,<...>) <...>```<br/>O fator de carga é impresso ao final da saída.
 ```
 1: include
